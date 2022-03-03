@@ -20,6 +20,7 @@ export class MovieDetails {
   spoken_languages!: Language[];
   release_date!: Date;
   genres!: Genre[];
+  comment!: Comment[];
 
   constructor() {
   }
@@ -34,4 +35,9 @@ export interface Language {
 export interface Genre {
   id: number,
   name: string
+}
+
+export interface Comment {
+  rating: number,
+  text: string
 }

@@ -17,3 +17,25 @@
       </li>
     </ul>
 </div>
+
+<div>
+  <h2>Commentaires</h2>
+
+  <form class="formComment" [formGroup]="commentForm" (ngSubmit)="addComment()">
+    <label for="rating">Note : </label>
+    <input id="rating" type="text" formControlName="rating" required>
+    <label for="text">Texte : </label>
+    <input id="text" type="text" formControlName="text" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <div *ngFor="let item of comments" class="comments">
+    <div class="note">
+      <div>Note : </div>
+      <div class="rating"> {{ item.rating }}</div>
+    </div>
+    <div class="comment" >
+      {{ item.text }}
+    </div>
+  </div>
+</div>

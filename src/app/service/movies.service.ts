@@ -2,7 +2,7 @@ import { Movie } from './../model/model';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Genre } from '../model/model';
+import { Genre, Comment } from '../model/model';
 
 import { BehaviorSubject } from 'rxjs';
 
@@ -53,5 +53,10 @@ export class MoviesServiceService {
       .get<Movie[]>(
         `${this.url}?genre_id=${genreId}`
       )
-  }
+    }
+
+    postCommentOnMovie(id: number, rating: number, text: string) : Observable<Comment>{
+      return this.http
+      .post<Comment>(`${this.url}/${id}/comments`, { rating, text })
+    }
 }
