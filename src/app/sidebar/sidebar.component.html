@@ -11,8 +11,8 @@
 </label>
 <div id="sidebarMenu">
   <ul class="sidebarMenuInner">
-    <li *ngFor="let item of genres" >
-      <a (click)="changeGenre(item.id)" target="_blank">{{item.name}}</a>
+    <li (click)="changeGenre(item.id)" *ngFor="let item of genres" >
+      <a target="_blank">{{item.name}}</a>
     </li>
   </ul>
 </div>

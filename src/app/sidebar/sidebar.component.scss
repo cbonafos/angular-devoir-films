@@ -41,6 +41,10 @@
     transition: transform 250ms ease-in-out;
     background: #FFFFFF;
 }
+
+li:hover {
+  background-color: #0000001f;
+}
 @media screen and (max-width: 1023px) {
   .header .logo {
     margin-left: 60px;
