@@ -21,6 +21,7 @@ export class MovieDetails {
   release_date!: Date;
   genres!: Genre[];
   comment!: Comment[];
+  production_companies!: ProductionCompanies[]
 
   constructor() {
   }
@@ -40,4 +41,11 @@ export interface Genre {
 export interface Comment {
   rating: number,
   text: string
+}
+
+export interface ProductionCompanies {
+  id: number,
+  logo_path: string,
+  name: string,
+  origin_country: string
 }
