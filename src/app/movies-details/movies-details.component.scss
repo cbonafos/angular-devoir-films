@@ -1,0 +1,14 @@
+.details-img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.genres {
+  padding-left: 0;
+  display: flex;
+}
+
+.genres li {
+  list-style-type: none;
+  margin-right: 1em;
+}
